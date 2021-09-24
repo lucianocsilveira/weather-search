@@ -1,0 +1,63 @@
+<div class="header">
+    <a routerLink="/search" routerLinkActive="router-link-active"  class="back-icon ion-android-arrow-back"></a>
+
+    <form class="input-container" (submit)="submit($event)">
+        <input type="text" placeholder="Your city name" #city>
+        <mat-icon matSuffix (click)='search()'>search</mat-icon>
+    </form>
+</div>
+<div class="container">
+    <span class="title">Weather in {{weatherCity.name}}, {{weatherCity.sys.country}}</span>
+    <span class="date">{{weatherCity.dt}}</span>
+    <mat-card class="content">
+        <div class="content-header">
+            <div class="weather">
+                <div class="temp">{{weatherCity.main.temp.toFixed(1)}}°C</div>
+                <div class="icon">
+                    <img src="https://openweathermap.org/img/w/{{weatherCity.weather[0].icon}}.png">
+                    <span>{{weatherCity.weather[0].description}}</span>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info-content">
+                    <span class="info-text bold">Máx</span>
+                    <span class="info-value color-red bold">{{weatherCity.main.temp_max.toFixed(1)}}°C</span>
+                </div>
+                <div class="info-content">
+                    <span class="info-text bold">Min</span>
+                    <span class="info-value color-blue bold">{{weatherCity.main.temp_min.toFixed(1)}}°C</span>
+                </div>
+                <div class="info-content">
+                    <span class="info-text bold">Sunrise</span>
+                    <span class="info-value ">{{weatherCity.sys.sunrise}}</span>
+                </div>
+                <div class="info-content">
+                    <span class="info-text bold">Sunset</span>
+                    <span class="info-value">{{weatherCity.sys.sunset}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="content-list">
+            <div class="title-container">
+                <span class="title">5 day weather forecast</span>
+                <span class="hours">every 3 hours</span>
+            </div>
+            <div class="list">
+                <div *ngFor="let forecast of weatherForecast.list" class="list-item">
+                    <div class="date-time">
+                        <span class="date">{{forecast.formated_dt_txt}}</span>
+                        <span class="time">{{forecast.formated_time_txt}}</span>
+                    </div>
+                    <div class="icon">
+                        <img src="https://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png">
+                        <span>{{forecast.weather[0].description}}</span>
+                    </div>
+                    <div class="temp">
+                        <span class="color-red bold">{{forecast.main.temp_max}}°C</span>
+                        <span class="color-blue bold">{{forecast.main.temp_min}}°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

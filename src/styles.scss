@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --background: ##f6f6f6;
+    --gray-line: #DCDDE0;
+    --text: #3c3c3c;
+    --text-highlight: #B3B9FF;
+    --title: #2E384D;
+    --red: #b30000;
+    --green: #4CD62B;
+    --blue: #39a3db;
+    --blue-dark: #2d7eaa;
+    --blue-twitter: #2AA9E0;
+    --grey: #f0f0f0;
+}
+
+html, body { height: 100%; }
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: var(--grey);
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    color: var(--text);
+    opacity: 0.5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-dark);
+  border-radius: 5px;
+}
+
+.input-container{
+    width: 80%;
+    height: 50px;
+    max-width: 460px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.input-container input{
+    flex: 1;
+    margin-right: 10px;
+    border: none;
+    line-height: 40px;
+    font-size: 16px;
+    color: var(--text);
+}
+
+.input-container input:focus{
+    outline: 0px;
+
+}
+
+.input-container mat-icon{
+    color: var(--blue);
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.color-red{
+    color: var(--red);
+}
+
+.color-blue{
+    color: var(--blue);
+}
+
+.bold{
+    font-weight: bold;
+}

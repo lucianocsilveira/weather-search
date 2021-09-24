@@ -1,0 +1,215 @@
+.header{
+    width: 100%;
+    height: 120px;
+    background-color: var(--blue);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container .title{
+    font-size: 36px;
+    color: var(--text);
+    margin: 20px 0;
+}
+
+.container .date{
+    opacity: 0.5;
+    font-family: Roboto;
+    font-size: 14px;
+}
+
+.container mat-card{
+    max-width: 780px;
+    width: 80%;
+    margin: 32px 0 20px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container .content .content-header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .content .content-header .weather{
+    width: 200px;
+    border-radius: 4px;
+    border: solid 2px var(--grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .content .content-header .weather div{
+    width: 100%;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content .content-header .weather .temp{
+    background-color: var(--grey);
+    font-size: 48px;
+    font-weight: bold;
+    opacity: 0.75;
+}
+.container .content .content-header .weather .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .content .weather .temp{
+    background-color: var(--grey);
+}
+
+.container .content .content-header .info{
+    margin-left: 40px;
+
+    flex: 1;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.container .content .content-header .info-content{
+    width: 100%;
+    height: 52px;
+    border-bottom: 1px solid var(--grey);
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.info-text{
+    color: var(--text);
+    width: 109px;
+}
+
+.container .content-list{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.container .content-list .title-container{
+    padding: 0 5px;
+    margin-bottom: 20px;
+}
+
+.container .content-list .title{
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.container .content-list .hours{
+    opacity: 0.5;
+    font-size: 12px;
+    font-style: italic;
+}
+.container .content-list .list{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container .content-list .list .list-item{
+    width: 100%;
+    padding: 0 40px;
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container .content-list .list .list-item:hover{
+    background: linear-gradient(-90deg, var(--grey) 98%,var(--blue) 2%);
+    
+}
+
+.container .content-list .list .list-item .date-time{
+    width: 150px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container .content-list .list .list-item .date-time .date{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text);
+    opacity: 1;
+    
+}
+.container .content-list .list .list-item .date-time .time{
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text);
+    opacity: 0.5;
+}
+
+.container .content-list .list .list-item .icon{
+    width: 200px;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container .content-list .list .list-item .icon span{
+    font-style: italic;
+    color: var(--text);
+    opacity: 0.5;
+    margin-left: 10px;
+}
+.container .content-list .list .list-item .temp{
+
+    height: 96px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container .content-list .list .list-item .temp span{
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.back-icon{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 25px;
+    color: var(--white);
+}
+

@@ -1,0 +1,34 @@
+<div class="header">
+    <div class="title">
+        <h2>WEATHER IN YOUR CITY</h2>
+    </div>
+    <form class="input-container" (submit)="submit($event)">
+        <input type="text" placeholder="Your city name" #city>
+        <mat-icon (click)='search()' matSuffix>search</mat-icon>
+    </form>
+</div>
+<div class="list">
+    <mat-card *ngFor="let city of listCity;" (click)="viewDetail(city.id)">
+        <div class="temp">
+            <span>{{city.main.temp.toFixed(1)}}°C</span>
+        </div>
+        <div class="city">
+                <div class="city-name">
+                    {{city.name}}, {{city.sys.country}}
+                    <img src="http://openweathermap.org/images/flags/{{city.sys.country.toLowerCase()}}.png">
+                </div>
+            <div class="temp-max">
+                <span>Máx</span>
+                <span class="val-temp-max">{{city.main.temp_max.toFixed(1)}}°C</span>
+            </div>
+            <div class="temp-min">
+                <span>Min</span>
+                <span class="val-temp-min">{{city.main.temp_min.toFixed(1)}}°C</span>
+            </div>
+        </div>
+        <div class="icon">
+            <img src="https://openweathermap.org/img/w/{{city.weather[0].icon}}.png">
+            <span>{{city.weather[0].description}}</span>
+        </div>
+    </mat-card>
+</div>
